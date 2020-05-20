@@ -1,8 +1,8 @@
 const fs = require('fs-extra')
 const path = require('path')
 
-const commands = ['create', 'list', '']
-const formats = ['bin-template']
+const commands = ['my', '']
+const formats = ['ghp']
 const fakelib = path.resolve(__dirname, '../.lib')
 const reallib = path.resolve(__dirname, '../lib')
 

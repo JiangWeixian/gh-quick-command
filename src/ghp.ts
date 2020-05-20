@@ -4,9 +4,8 @@ program
   .version(require('../package.json').version)
   .usage('<command> [options]')
   .command(
-    'create',
-    'neo <template-name> [project-name], generate a new project from a neo template',
+    'my',
+    'ghp my <stars | repos>, ghp my stars will open github my star page',
   )
-  .command('list', 'list all templates')
 
 program.parse(process.argv)

@@ -6,7 +6,7 @@ import chalk from 'chalk'
  * Prefix.
  */
 
-const prefix = '   neo'
+const prefix = '   ghp'
 const sep = chalk.gray('·')
 
 /**

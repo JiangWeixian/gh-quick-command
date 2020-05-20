@@ -41,7 +41,7 @@ const run = () => {
     if (err) {
       logger.fatal(`failed open ${url}/${username}?tab=${maps[tabname]}`)
     } else {
-      logger.fatal(`🎉 ${url}/${username}?tab=${maps[tabname]}`)
+      logger.success(`🎉 ${url}/${username}?tab=${maps[tabname]}`)
     }
   })
 }

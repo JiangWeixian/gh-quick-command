@@ -40,6 +40,8 @@ const run = () => {
   exec(`open ${url}/${username}?tab=${maps[tabname]}`, (err) => {
     if (err) {
       logger.fatal(`failed open ${url}/${username}?tab=${maps[tabname]}`)
+    } else {
+      logger.fatal(`🎉 ${url}/${username}?tab=${maps[tabname]}`)
     }
   })
 }

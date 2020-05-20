@@ -6,8 +6,7 @@
   "module": ".lib/ghp.esm.js",
   "bin": {
     "ghp": "lib/ghp",
-    "ghp-create": "lib/ghp-create",
-    "ghp-list": "lib/ghp-list"
+    "ghp-my": "lib/ghp-my"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

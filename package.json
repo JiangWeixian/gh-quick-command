@@ -1,6 +1,6 @@
 {
   "name": "gh-quick-command",
-  "version": "0.0.5-0",
+  "version": "0.0.5-1",
   "description": "templates for command project",
   "main": ".lib/ghp.cjs.js",
   "module": ".lib/ghp.esm.js",

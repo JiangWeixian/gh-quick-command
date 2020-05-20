@@ -15,10 +15,7 @@ program.usage('my [stars | repos]')
  * Padding.
  */
 
-console.log()
-process.on('exit', () => {
-  console.log()
-})
+process.on('exit', () => {})
 
 program.parse(process.argv)
 let tabname = program.args && program.args[0]

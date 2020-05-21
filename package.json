@@ -17,6 +17,14 @@
     "check": "npm outdated && npm outdated --save-dev",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish --any-branch"
   },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "github",
+    "command",
+    "zsh"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/JiangWeixian/gh-quick-command"

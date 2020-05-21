@@ -27,7 +27,6 @@ const maps = {
 }
 
 const run = () => {
-  // template did't exit
   if (!username) {
     logger.fatal(`🐈 github username not found!`)
   }
@@ -40,8 +39,6 @@ const run = () => {
   exec(`open ${url}/${username}?tab=${maps[tabname]}`, (err) => {
     if (err) {
       logger.fatal(`failed open ${url}/${username}?tab=${maps[tabname]}`)
-    } else {
-      logger.success(`🎉 ${url}/${username}?tab=${maps[tabname]}`)
     }
   })
 }

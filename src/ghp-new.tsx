@@ -25,9 +25,9 @@ const maps = {
 
 const run = () => {
   if (!typename) {
-    exec(`open ${maps['repos']}`, (err) => {
+    exec(`open ${maps.repo}`, (err) => {
       if (err) {
-        logger.fatal(`failed open ${maps['repos']}`)
+        logger.fatal(`failed open ${maps.repo}`)
       }
     })
     process.exit(1)

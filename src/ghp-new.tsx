@@ -21,7 +21,7 @@ program.parse(process.argv)
 let typename = program.args && program.args[0]
 const maps = {
   'repo': `${ORIGIN.home}/new`,
-  'token': ''
+  'token': `${ORIGIN.home}/tokens/new`
 }
 
 const run = () => {

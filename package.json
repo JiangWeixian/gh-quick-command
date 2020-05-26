@@ -1,7 +1,7 @@
 {
   "name": "gh-quick-command",
   "version": "0.2.0-2",
-  "description": "templates for command project",
+  "description": "quick open github page with command",
   "main": ".lib/ghp.cjs.js",
   "module": ".lib/ghp.esm.js",
   "bin": {

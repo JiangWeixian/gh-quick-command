@@ -22,8 +22,8 @@ program.parse(process.argv)
 let tabname = program.args && program.args[0]
 const username = getGithubUsername()
 const maps = {
-  'stars': 'stars',
-  'repos': 'repositories',
+  'stars': `${ORIGIN.home}/${username}?tab=stars`,
+  'repos': `${ORIGIN.home}/${username}?tab=repositories`,
 }
 
 const run = () => {
@@ -36,9 +36,9 @@ const run = () => {
   if (!username || !maps[tabname]) {
     process.exit(1)
   }
-  exec(`open ${ORIGIN.home}/${username}?tab=${maps[tabname]}`, (err) => {
+  exec(`open ${maps[tabname]}`, (err) => {
     if (err) {
-      logger.fatal(`failed open ${ORIGIN.home}/${username}?tab=${maps[tabname]}`)
+      logger.fatal(`failed open ${maps[tabname]}`)
     }
   })
 }

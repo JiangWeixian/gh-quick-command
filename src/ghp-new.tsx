@@ -1,9 +1,11 @@
 import * as program from 'commander'
 import { exec } from 'child_process'
+import * as getGithubUsername from 'git-user-name'
+import * as getRepoInfo from 'git-repo-info'
+import * as getRepoName from 'git-repo-name'
 
 import logger from './utils/logger'
 import { ORIGIN } from './utils/constants'
-
 
 /**
  * Usage.
@@ -19,9 +21,13 @@ process.on('exit', () => {})
 
 program.parse(process.argv)
 let typename = program.args && program.args[0]
+const username = getGithubUsername()
+const info = getRepoInfo()
+const repo = getRepoName.sync()
 const maps = {
   'repo': `${ORIGIN.home}/new`,
-  'token': `${ORIGIN.home}/tokens/new`
+  'token': `${ORIGIN.home}/tokens/new`,
+  'pr': `${ORIGIN.home}/${username}/${repo}/compare/${info.branch}?expand=1`
 }
 
 const run = () => {

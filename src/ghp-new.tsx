@@ -26,7 +26,7 @@ const info = getRepoInfo()
 const repo = getRepoName.sync()
 const maps = {
   'repo': `${ORIGIN.home}/new`,
-  'token': `${ORIGIN.home}/tokens/new`,
+  'token': `${ORIGIN.setting}/tokens/new`,
   'pr': `${ORIGIN.home}/${username}/${repo}/compare/${info.branch}?expand=1`
 }
 

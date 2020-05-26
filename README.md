@@ -17,3 +17,5 @@
 ### ghp new
 
 - `ghp new` - open github create repo page
+- `ghp new token` - open create personal access token page
+- `ghp new pr` - open create pr page

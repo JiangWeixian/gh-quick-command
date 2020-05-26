@@ -5,7 +5,7 @@
     "lib": ["es2016"],
     "moduleResolution": "node",
     "importHelpers": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowSyntheticDefaultImports": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

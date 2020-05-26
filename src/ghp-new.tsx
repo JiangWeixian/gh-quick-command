@@ -2,6 +2,7 @@ import * as program from 'commander'
 import { exec } from 'child_process'
 
 import logger from './utils/logger'
+import { ORIGIN } from './utils/constants'
 
 
 /**
@@ -18,9 +19,9 @@ process.on('exit', () => {})
 
 program.parse(process.argv)
 let typename = program.args && program.args[0]
-const url = 'https://github.com'
 const maps = {
-  'repo': `${url}/new`,
+  'repo': `${ORIGIN.home}/new`,
+  'token': ''
 }
 
 const run = () => {

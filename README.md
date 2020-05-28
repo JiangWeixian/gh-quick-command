@@ -4,10 +4,15 @@
 [![npm](https://img.shields.io/npm/v/gh-quick-command.svg?style=flat-square)](https://www.npmjs.org/package/gh-quick-command) [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![npm](https://img.shields.io/npm/dm/gh-quick-command.svg?style=flat-square)](https://www.npmjs.org/package/gh-quick-command)
 
 - [gh-quick-command](#gh-quick-command)
+  - [usage](#usage)
   - [command](#command)
     - [ghp my](#ghp-my)
     - [ghp new](#ghp-new)
 
+
+## usage
+
+`npm install -g gh-quick-command`
 
 ## command
 

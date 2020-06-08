@@ -11,5 +11,9 @@ program
     'new',
     'ghp new, open github repo create page',
   )
+  .command(
+    'open',
+    'ghp open, open github repo page',
+  )
 
 program.parse(process.argv)

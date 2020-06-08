@@ -7,7 +7,8 @@
   "bin": {
     "ghp": "lib/ghp",
     "ghp-my": "lib/ghp-my",
-    "ghp-new": "lib/ghp-new"
+    "ghp-new": "lib/ghp-new",
+    "ghp-open": "lib/ghp-open"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

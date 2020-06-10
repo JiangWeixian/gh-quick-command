@@ -1,6 +1,6 @@
 {
   "name": "gh-quick-command",
-  "version": "0.3.0-1",
+  "version": "0.3.0-2",
   "description": "quick open github page with command",
   "main": ".lib/ghp.cjs.js",
   "module": ".lib/ghp.esm.js",

@@ -1,10 +1,9 @@
 import * as program from 'commander'
-import * as getGithubUsername from 'git-user-name'
 import { exec } from 'child_process'
 
 import logger from './utils/logger'
 import { ORIGIN } from './utils/constants'
-
+import { getUsename } from './utils/gitinfo'
 
 /**
  * Usage.
@@ -20,20 +19,19 @@ process.on('exit', () => {})
 
 program.parse(process.argv)
 let tabname = program.args && program.args[0]
-const username = getGithubUsername()
 const maps = {
-  'stars': `${ORIGIN.home}/${username}?tab=stars`,
-  'repos': `${ORIGIN.home}/${username}?tab=repositories`,
+  'stars': `${ORIGIN.home}/${getUsename()}?tab=stars`,
+  'repos': `${ORIGIN.home}/${getUsename()}?tab=repositories`,
 }
 
 const run = () => {
-  if (!username) {
+  if (!getUsename()) {
     logger.fatal(`🐈 github username not found!`)
   }
   if (!tabname || !maps[tabname]) {
     logger.fatal(`🐈 wrooong input!`)
   }
-  if (!username || !maps[tabname]) {
+  if (!getUsename() || !maps[tabname]) {
     process.exit(1)
   }
   exec(`open ${maps[tabname]}`, (err) => {

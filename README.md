@@ -18,7 +18,9 @@
 
 ## usage
 
-`npm install -g gh-quick-command`
+```
+npm install -g gh-quick-command
+```
 
 ## command
 

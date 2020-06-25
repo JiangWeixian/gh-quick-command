@@ -15,6 +15,8 @@
     - [ghp new](#ghp-new)
     - [ghp open](#ghp-open)
 
+> **⚠️ WARNING**  
+use `open` to lanuch website, so it's not working on window platform
 
 ## usage
 

@@ -29,3 +29,5 @@ export const getUsename = () => {
   }
   return username
 }
+
+console.log(getGitInfo())

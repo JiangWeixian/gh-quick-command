@@ -3,7 +3,9 @@ import { exec } from 'child_process'
 
 import logger from './utils/logger'
 import { ORIGIN } from './utils/constants'
-import { getGitInfo } from './utils/gitinfo'
+import { getGitInfo, getRepoUrl } from './utils/gitinfo'
+
+type Commands = 'repo' | undefined
 
 /**
  * Usage.
@@ -18,29 +20,25 @@ program.usage('open')
 process.on('exit', () => {})
 
 program.parse(process.argv)
-let typename = program.args && program.args[0]
-const maps = {
-  'repo': `${ORIGIN.home}/${getGitInfo().username}/${getGitInfo().reponame}/tree/${getGitInfo().info.branch}`
+let typename = program.args && program.args[0] as Commands
+
+const commander = async (type: Commands) => {
+  switch (type) {
+    case 'repo':
+    default:
+      const repoUrl = await getRepoUrl()
+      return `${ORIGIN.home}/${repoUrl}/tree/${getGitInfo().info.branch}`
+  }
 }
 
-const run = () => {
-  if (!typename) {
-    exec(`open ${maps.repo}`, (err) => {
-      if (err) {
-        logger.fatal(`failed open ${maps.repo}`)
-      }
-    })
-    process.exit(1)
-  }
-  if (!maps[typename]) {
-    logger.fatal(`🐈 wrooong input!`)
-    process.exit(1)
-  }
-  exec(`open ${maps[typename]}`, (err) => {
+const run = async () => {
+  const command = await commander(typename)
+  exec(`open ${command}`, (err) => {
     if (err) {
-      logger.fatal(`failed open ${maps[typename]}`)
+      logger.fatal(`🐈 failed open ${command}`)
     }
   })
+  process.exit(1)
 }
 
 run()

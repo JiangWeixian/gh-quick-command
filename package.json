@@ -1,6 +1,6 @@
 {
   "name": "gh-quick-command",
-  "version": "0.4.1-0",
+  "version": "0.4.2-0",
   "description": "quick open github page with command",
   "main": ".lib/ghp.cjs.js",
   "module": ".lib/ghp.esm.js",
@@ -38,7 +38,8 @@
     "git-remote-origin-url": "3.1.0",
     "git-repo-info": "2.1.1",
     "git-repo-name": "1.0.1",
-    "git-user-name": "2.0.0"
+    "git-user-name": "2.0.0",
+    "tslib": "2.0.0"
   },
   "devDependencies": {
     "@types/git-repo-name": "1.0.0",
@@ -52,7 +53,6 @@
     "prettier": "1.17.0",
     "pretty-quick": "1.10.0",
     "rimraf": "2.6.3",
-    "tslib": "2.0.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-plugin-prettier": "2.0.1",

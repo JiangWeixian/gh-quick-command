@@ -35,13 +35,13 @@
   "dependencies": {
     "chalk": "2.4.2",
     "commander": "2.20.0",
-    "git-remote-origin-url": "^3.1.0",
-    "git-repo-info": "^2.1.1",
-    "git-repo-name": "^1.0.1",
+    "git-remote-origin-url": "3.1.0",
+    "git-repo-info": "2.1.1",
+    "git-repo-name": "1.0.1",
     "git-user-name": "2.0.0"
   },
   "devDependencies": {
-    "@types/git-repo-name": "^1.0.0",
+    "@types/git-repo-name": "1.0.0",
     "@types/git-user-name": "2.0.0",
     "@types/node": "12.6.8",
     "@types/rimraf": "2.0.2",
@@ -52,6 +52,7 @@
     "prettier": "1.17.0",
     "pretty-quick": "1.10.0",
     "rimraf": "2.6.3",
+    "tslib": "2.0.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-plugin-prettier": "2.0.1",
